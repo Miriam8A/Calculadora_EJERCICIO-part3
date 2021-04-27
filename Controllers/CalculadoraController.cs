@@ -31,7 +31,7 @@ namespace CONTACTO_EJERCICIO.Controllers
 
             if("+" == objCalculadora.Operando){
                 res = objCalculadora.Operador1 + objCalculadora.Operador2;
-                msj = "El resultado es " + res;
+                msj = "El resultado es  "+ res;
             }
             if("/" == objCalculadora.Operando){
                 if(objCalculadora.Operador2 == 0){
@@ -40,7 +40,6 @@ namespace CONTACTO_EJERCICIO.Controllers
                     res= objCalculadora.Operador1 / objCalculadora.Operador2;
                     msj="El resultado es "+ res;
                 }
-                res = objCalculadora.Operador1 + objCalculadora.Operador2;
             }
             ViewData["Message"]="El resultado es"+res;
             return View("Index");
