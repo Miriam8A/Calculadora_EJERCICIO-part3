@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -33,6 +34,14 @@ namespace CONTACTO_EJERCICIO.Controllers
                 res = objCalculadora.Operador1 + objCalculadora.Operador2;
                 msj = "El resultado es  "+ res;
             }
+            if("-" == objCalculadora.Operando){
+                res = objCalculadora.Operador1 - objCalculadora.Operador2;
+                msj = "El resultado es  "+ res;
+            }
+            if("*" == objCalculadora.Operando){
+                res = objCalculadora.Operador1 * objCalculadora.Operador2;
+                msj = "El resultado es  "+ res;
+            }
             if("/" == objCalculadora.Operando){
                 if(objCalculadora.Operador2 == 0){
                     msj="El numero no puede ser divido entre 0";    
@@ -41,6 +50,8 @@ namespace CONTACTO_EJERCICIO.Controllers
                     msj="El resultado es "+ res;
                 }
             }
+
+            
             ViewData["Message"]="El resultado es"+res;
             return View("Index");
         }
